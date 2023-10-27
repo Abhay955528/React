@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import NavBar from "./components/NavBar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alerts";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); // Dark Mood Enable
@@ -33,21 +33,22 @@ function App() {
 
   return (
     <>
-      <Router>
-        <NavBar mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container">
-          <Routes>
-            <Route path="/about" element={<About />}></Route>
-            <Route
+      {/* <Router> */}
+      <NavBar mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container">
+        {/* <Routes>
+            <Route path="/about" element={<About />}></Route> */}
+        {/* <Route
               path="/home"
               element={<TextForm heading="Enter the text to analiye" />}
             ></Route>
-          </Routes>
+          </Routes> */}
 
-          {/* <About /> */}
-        </div>
-      </Router>
+        <TextForm heading="Enter the text to analiye" />
+        {/* <About /> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }

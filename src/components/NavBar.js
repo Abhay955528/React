@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Link } from "react-router-dom";
+// import { a } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -11,9 +11,9 @@ export default function Navbar(props) {
       >
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <a className="navbar-brand" href="#">
               Navbar
-            </Link>
+            </a>
             <button
               className="navbar-toggler"
               type="button"
@@ -28,23 +28,23 @@ export default function Navbar(props) {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link
+                  <a
                     className="nav-link active"
                     aria-current="page"
-                    to="./home"
+                    href="#"
                   >
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./about">
+                  <a className="nav-link" href="#">
                     About
-                  </Link>
+                  </a>
                 </li>
                 {/* <li className="nav-item">
-                  <Link className="nav-link disabled" aria-disabled="true">
+                  <a className="nav-link disabled" aria-disabled="true">
                     Disabled
-                  </Link>
+                  </a>
                 </li> */}
               </ul>
             </div>
